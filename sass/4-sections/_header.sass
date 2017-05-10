@@ -1,13 +1,105 @@
-header
+.home-wrap header
   width: 135px
   background: white
-  padding: 30px 0 
+  padding: 30px 0
+  // menu is always sticky 
+  .header-position 
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    position: fixed
+    top: 30px
+    left: 0
+    bottom: 30px
+    width: 135px // width of parent (.home-wrap)
 
-  .logo
-   +hide-text
-   background: 
-    image: url(/img/free-eagle-logo.jpg)
-    repeat: no-repeat
-    position: center
-    size: cover
-   height: 80px
+    .logo
+     +hide-text
+     background: 
+      image: url(../img/free-eagle-logo.jpg)
+      repeat: no-repeat
+      position: center
+      size: contain
+     height: 80px
+     padding: 0
+     margin: 0
+     max-width: 135px
+
+    .site-nav
+     ul
+      margin: 20px 0
+      text-align: right
+      padding: 0 20px 0 0
+     li
+      margin-bottom: 10px
+      &:last-child
+       margin-bottom: 0
+
+    .email-link  
+     display: block
+     text-align: right
+     padding-right: 30px
+
+    .mobile-nav-toggle
+     display: none
+     width: 50px
+     height: 50px
+     // background: pink
+     margin-right: 20px
+     align-items: center
+     cursor: pointer
+
+    span,
+    span:before,
+    span:after
+     content: ""
+     display: block
+     height: 2px
+     width: 100%
+     background: tint(#333, 20%)
+     position: relative
+     transition: all .3s ease-in-out
+
+    span:before
+     top: 15px
+    span:after
+     bottom: 17px
+
+    &:hover span
+      background: transparent
+    &:hover span:before,
+    &:hover span:after
+     transform-origin: center
+     transform: rotate(45deg) 
+     top: 0
+    &:hover span:after
+     transform: rotate(-45deg) 
+
+
+@media (max-width: 775px)
+ .home-wrap header
+   display: block
+   width: auto
+
+   .header-position
+     width: auto
+     position: relative
+     top: auto
+     bottom: auto
+     left: auto
+     display: flex
+     flex-direction: row
+     align-items: center
+
+     .site-nav, .email-link
+      display: none
+
+     .logo  
+      height: 45px
+      background: 
+       size: contain
+
+     .mobile-nav-toggle
+      display: flex
+
+

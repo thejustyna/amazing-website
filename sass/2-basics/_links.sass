@@ -1,9 +1,9 @@
 a
-  color: $link_color
+  color: tint($link_color, 50%)
   text-decoration: none
   outline: 0
 
   &:hover,
-  &:focus
-    color: lighten($link_color, 20%)
+  &:focus // after click 
+    color: tint($link_color, 80%)
     transition: all .3s ease-in-out
