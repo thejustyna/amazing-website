@@ -1,40 +1,61 @@
 // .home-section
 //  flex:1
- // height: 2000px
- // display: block
+	// height: 2000px
+	// display: block
 
 .home-wrap
- display: flex
- min-height: 100vh
+	display: flex
+	min-height: 100vh
 
- @media (max-width: 775px)
-  display: block
+	@media (max-width: 775px)
+		display: block
 
- .home-section
-  flex: 1
+.home-section
+	flex: 1
 
-  section
-   padding: 50px 0
+	section
+		padding: 50px 0
 
-   .flex
-    display: flex 
-    justify-content: center
-    @media (max-width: 640px)
-     display: block
+		.flex
+			display: flex 
+			@media (max-width: 640px)
+				display: block
 
-    .col-1
-     max-width: 300px
-     margin: 0 10px
-     background: pink
-     @media (max-width: 640px)
-      max-width: 100%
+		.flex--center
+			justify-content: center
+
+		.flex--space-around
+			justify-content: space-around
+
+		.order-first
+			order: -1 // column is first when parent has "display:flex" property, when parent has "display:block", order is such as in document
+
+		.col-1
+			max-width: 300px
+			margin: 0 10px
+			// background: lightblue
+			@media (max-width: 640px)
+				max-width: 100%
+
+		.col-2
+			max-width: 620px
+			margin: 0 10px 
+			// background: honeydew 
+			@media (max-width: 640px)
+				max-width: 100%
+
+		.col-50
+			width: 50%
+			// background: silver
+			@media (max-width: 640px)
+				width: 100%
 
 
- // @media (max-width: 640px)
- //  .home-section section .flex
- //   display: block
- //   .col-1
- //    max-width: 100% 
+	// @media (max-width: 640px)
+	//  .home-section section .flex
+	//   display: block
+	//   .col-1
+	//    max-width: 100% 
 
 
 

@@ -1,131 +1,131 @@
 .home-wrap 
- header
-    width: 135px
-    background: $header-background 
-    padding: 30px 0
-    // menu elements is always sticky 
-    .header-position 
-      display: flex
-      flex-direction: column
-      justify-content: space-between
-      position: fixed
-      top: 30px
-      left: 0
-      bottom: 30px
-      width: 135px // width of parent (.home-wrap)
+	header
+		width: 135px
+		background: $header-background 
+		padding: 30px 0
+		// menu elements is always sticky 
+		.header-position 
+				display: flex
+				flex-direction: column
+				justify-content: space-between
+				position: fixed
+				top: 30px
+				left: 0
+				bottom: 30px
+				width: 135px // width of parent (.home-wrap)
 
-      .logo
-       +hide-text
-       background: 
-        image: url(../img/free-eagle-logo.jpg)
-        repeat: no-repeat
-        position: center
-        size: contain
-       height: 80px
-       padding: 0
-       margin: 0
-       max-width: 135px
+				.logo
+					+hide-text
+					background: 
+						image: url(../img/logo.svg)
+						repeat: no-repeat
+						position: center
+						size: contain
+					height: 80px
+					padding: 0
+					margin: 0
+					max-width: 135px
 
-      .site-nav
-       ul
-        margin: 20px 0
-        text-align: right
-        padding: 0 20px 0 0
-       li
-        margin-bottom: 10px
-        &:last-child
-         margin-bottom: 0
+				.site-nav
+					ul
+						margin: 20px 0
+						text-align: right
+						padding: 0 20px 0 0
+					li
+						margin-bottom: 10px
+						&:last-child
+							margin-bottom: 0
 
-      .email-link  
-       display: block
-       text-align: right
-       padding-right: 20px
+				.email-link  
+					display: block
+					text-align: right
+					padding-right: 20px
 
-      .mobile-nav-toggle
-       display: none
-       width: 50px
-       height: 50px
-       // background: pink
-       margin-right: 20px
-       align-items: center
-       cursor: pointer
+				.mobile-nav-toggle
+					display: none
+					width: 50px
+					height: 50px
+					// background: pink
+					margin-right: 20px
+					align-items: center
+					cursor: pointer
 
-      span,
-      span:before,
-      span:after
-       content: ""
-       display: block
-       height: 2px
-       width: 100%
-       background: tint(#333, 20%)
-       position: relative 
-       transition: all .3s ease-in-out
+				span,
+				span:before,
+				span:after
+					content: ""
+					display: block
+					height: 2px
+					width: 100%
+					background: tint(#333, 20%)
+					position: relative 
+					transition: all .3s ease-in-out
 
-      span:before
-       bottom: 15px
-      span:after
-       top: 13px
+				span:before
+					bottom: 15px
+				span:after
+					top: 13px
 
-      &:hover span
-        background: transparent
-      &:hover span:before
-       background: tint(#333, 40%)
-       transform-origin: center 
-       transform: rotate(45deg) 
-       bottom: 0 
-      &:hover span:after
-       transform: rotate(-45deg) 
-       top: 0
-       background: tint(#333, 40%)
-       transform-origin: center
+				&:hover span
+						background: transparent
+				&:hover span:before
+					background: tint(#333, 40%)
+					transform-origin: center 
+					transform: rotate(45deg) 
+					bottom: 0 
+				&:hover span:after
+					transform: rotate(-45deg) 
+					top: 0
+					background: tint(#333, 40%)
+					transform-origin: center
 
- .mobile-nav
-  display: none
-  position: absolute
-  width: 100%
-  background: $mobile-nav-background
-  padding: 30px 0 20px
-  transform: translateY(-100%)
-  transition: all .3s ease-in-out
-  ul 
-   margin: 0
-   padding: 0
-  li 
-   text-align: center
-   margin-bottom: 5px
+	.mobile-nav
+		display: none
+		position: absolute
+		width: 100%
+		background: $mobile-nav-background
+		padding: 30px 0 20px
+		transform: translateY(-100%)
+		transition: all .3s ease-in-out
+		ul 
+			margin: 0
+			padding: 0
+		li 
+			text-align: center
+			margin-bottom: 5px
 
 
 @media (max-width: 775px)
- .home-wrap 
-  header
-     // display: block
-     width: auto // overwrite width : 135 px
-     padding: 10px 0
+	.home-wrap 
+		header
+					// display: block
+					width: auto // overwrite width : 135 px
+					padding: 10px 0
 
-     .header-position
-       width: auto // overwrite width : 135 px
-       position: relative
-       top: auto
-       bottom: auto
-       left: auto
-       // display: flex - inherited
-       flex-direction: row
-       align-items: center
+					.header-position
+							width: auto // overwrite width : 135 px
+							position: relative
+							top: auto
+							bottom: auto
+							left: auto
+							// display: flex - inherited
+							flex-direction: row
+							align-items: center
 
-       .site-nav, .email-link
-        display: none
+							.site-nav, .email-link
+								display: none
 
-       .logo  
-        height: 45px
-        background: 
-         size: contain
+							.logo  
+								height: 45px
+								background: 
+									size: contain
 
-       .mobile-nav-toggle
-        display: flex // overwrite display: none
+							.mobile-nav-toggle
+								display: flex // overwrite display: none
 
-  .mobile-nav.is-open
-   display: block
-   transform: translateY(0%)
+		.mobile-nav.is-open
+			display: block
+			transform: translateY(0%)
 
 
 

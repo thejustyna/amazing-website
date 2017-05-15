@@ -1,23 +1,23 @@
 mixin nav-content()
- ul
-    li: a(href="#about") About
-    li: a(href="#YoutTube") YoutTube
-    li: a(href="#Mentoring") Mentoring
-    li: a(href="#Articles") Articles
-    li: a(href="#Vine") Vine
-    li: a(href="#Design") Design
-    li: a(href="#Notes") Notes
-    li: a(href="#Contact") Contact
+	ul
+		li: a(href="#about") About
+		li: a(href="#YoutTube") YoutTube
+		li: a(href="#Mentoring") Mentoring
+		li: a(href="#Articles") Articles
+		li: a(href="#Vine") Vine
+		li: a(href="#Design") Design
+		li: a(href="#Notes") Notes
+		li: a(href="#Contact") Contact
 
 .mobile-nav
- +nav-content()
+	+nav-content()
 
 header
- .header-position
-  h1.logo Logo Name
-  nav.site-nav
-   +nav-content()
+	.header-position
+		h1.logo Logo Name
+		nav.site-nav
+			+nav-content()
 
-  a(href="#").email-link +email me
+		a(href="#").email-link +email me
 
-  .mobile-nav-toggle: span
+		.mobile-nav-toggle: span

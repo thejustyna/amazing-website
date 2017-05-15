@@ -1,0 +1,35 @@
+
+.home-section
+	section.about
+		background: 
+			image: url(../img/header3.jpg)
+			repeat: no-repeat
+			position: center bottom
+			size: cover
+		.col-1
+			padding-top: 150px
+			padding-bottom: 5px
+			max-width: 400px
+			@media(max-width: 640px)
+					padding-top: 20px
+					margin-bottom: -50px
+					margin-left: 20px
+
+			@media(max-width: 480px)
+				padding-bottom: 0px
+				text-align: center
+				max-width: 300px
+				padding-top: 0px
+
+				// background: grey
+			&.push-left
+				margin-right: 200px
+				@media (max-width: 480px)
+					margin-left: auto
+					margin-right: auto
+
+			h2
+			 color: tint(black, 20%)
+
+
+			
