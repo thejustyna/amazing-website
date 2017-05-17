@@ -1,0 +1,23 @@
+mixin face()
+	li.face(style="background-image: url(https://www.fillmurray.com/80/80);")
+		.bubble
+			p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, excepturi.
+			cite - Michael Phelps
+
+section.mentoring
+	.flex.flex--center
+		.col-1
+			ul.faces
+				+face
+				+face
+				li.face.has-bubble-open(style="background-image: url(https://www.fillmurray.com/80/80);")
+					.bubble
+						p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, excepturi.
+						cite - Michael Phelps
+				+face
+				+face
+
+
+		.col-1
+			p.home-lead.outdented  ...Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+			a(href="").button.home-cta Schedule a Call

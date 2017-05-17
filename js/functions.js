@@ -1,4 +1,13 @@
+ $(function(){
+ 	mentoring_bubble_click();
+ });
 
+function mentoring_bubble_click(){
+	$('.face').on('click', function(){
+		$(this).addClass('has-bubble-open')
+			.siblings().removeClass('has-bubble-open');
+	});
+}
 
  $(window).scroll(function(){
  	scrolling_thumbnails_in_YouTube_section();
