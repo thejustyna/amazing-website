@@ -1,23 +1,19 @@
-mixin face()
-	li.face(style="background-image: url(https://www.fillmurray.com/80/80);")
+mixin face(face, words, name)
+	li.face(style= face)
 		.bubble
-			p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, excepturi.
-			cite - Michael Phelps
+			p=  words
+			cite= name
 
 section.mentoring
 	.flex.flex--center
 		.col-1
 			ul.faces
-				+face
-				+face
-				li.face.has-bubble-open(style="background-image: url(https://www.fillmurray.com/80/80);")
-					.bubble
-						p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, excepturi.
-						cite - Michael Phelps
-				+face
-				+face
+				+face("background-image: url(https://randomuser.me/api/portraits/men/1.jpg);", " Lorem ipsum dolor sit amet, consectetur adipisicing elit.", "- Michael Phelpss")
+				+face("background-image: url(https://randomuser.me/api/portraits/women/83.jpg);", " Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, similique cumque nulla hic rem velit.", "- Vanessa Jordan")
+				+face("background-image: url(https://randomuser.me/api/portraits/men/76.jpg);", " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit similique perspiciatis voluptatem ut provident officiis ea vero repudiandae expedita facere.", "- Fernando Sucre")
+				+face("background-image: url(https://randomuser.me/api/portraits/women/5.jpg);", " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum animi tempore sapiente, eveniet nisi rem, repellat molestiae dolore.", "- Sara Tancerdi")
+				+face("background-image: url(https://randomuser.me/api/portraits/men/5.jpg);", " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis.", "- Kobe Ryan")
 
-
-		.col-1
-			p.home-lead.outdented  ...Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+		.col-1.cta
+			p.home-lead Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 			a(href="").button.home-cta Schedule a Call
