@@ -1,0 +1,62 @@
+.home-section
+	section.articles
+		background:
+			image: url(../img/light4.png)
+			size: cover
+			repeat: no-repeat
+			position: center bottom
+			padding-bottom: 0px
+		.col-1
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			.button
+				background: #53A2B0
+				color : white
+			.home-lead
+				color: black
+				line-height: 2
+				font:
+					size: 20px	
+
+		.article-wrap
+			+clearfix
+		.article-thumb
+			display: block
+			background: 
+				size: cover
+			width: 33.333%
+			float: left
+			position: relative
+			overflow: hidden
+			&:after
+				content: ""
+				display: block
+				padding-top: 100%
+
+			.article-meta
+				position: absolute
+				background: fade-out(#53A2B0, 0.4) // Sass functionality
+				top: 0
+				bottom: 0
+				left: 0
+				right: 0
+				color: white 
+				padding: 10px
+				transform: translate(0%, 100%) scale(0.1)
+				transition: all .3s ease-in-out
+				opacity: 0
+				.date
+					font-style: italic
+					font-size: 0.8em
+
+		.article-thumb:hover .article-meta
+			opacity: 1
+			transform: translate(0%, 0%) scale(1)
+
+	@media (max-width: 640px)
+		section.articles
+			.col-1
+				padding: 50px
+

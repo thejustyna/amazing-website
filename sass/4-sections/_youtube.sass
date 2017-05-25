@@ -1,16 +1,16 @@
 .home-section
 	section.youtube
 		background: 
-			image: url(../img/youtube-red.jpg)
+			image: url(../img/light6.png)
 			repeat: no-repeat
-			position: center bottom
+			position: center
 			size: cover
 		color: white 
 		text-align: center
 
 		.col-1
 			width: 100%
-			height: 350px
+			height: 300px
 			display: flex
 			flex-direction: column
 			justify-content: center
@@ -21,15 +21,20 @@
 				height: auto
 
 			.home-lead
-				color: #fff
+				color: #000
 				line-height: 2
 				font:
 					size: 20px
-				text-shadow: 2px 2px rgba(0,0,0, .5)
+				// text-shadow: 2px 2px rgba(0,0,0, .5)
 
 			.home-cta
-				color: #b31217
-				margin: 40px 40px 0px 40px
+				background: #b31217
+				color: white
+				margin: 0 40px
+				@media (max-width: 640px)
+					padding: 13px 10px
+					margin: 0
+
 
 			.video-strip
 				background:

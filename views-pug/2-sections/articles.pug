@@ -1,0 +1,24 @@
+mixin thumb(img)
+	a(href="" style= img).article-thumb
+		.article-meta
+			.name Article Name
+			.date May 23, 2017
+
+section.articles
+	.flex.flex--center
+		.col-50
+			.article-wrap
+				+thumb("background-image: url(../img/picture01.jpg);")
+				+thumb("background-image: url(../img/picture02.jpg);")
+				+thumb("background-image: url(../img/picture03.jpg);")
+				+thumb("background-image: url(../img/picture04.jpg);")
+				+thumb("background-image: url(../img/picture05.jpg);")
+				+thumb("background-image: url(../img/picture06.jpg);")
+				+thumb("background-image: url(../img/picture07.jpg);")
+				+thumb("background-image: url(../img/picture08.jpg);")
+				+thumb("background-image: url(../img/picture09.jpg);")
+
+		.col-50.flex.flex--center.order-first
+			.col-1
+					p.home-lead.outdented ...Whatever you want to wirite
+					a(href="").button.home-cta See All Articles

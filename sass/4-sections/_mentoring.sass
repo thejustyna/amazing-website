@@ -1,10 +1,10 @@
 .home-section
 	section.mentoring
 		background: 
-			image: url(../img/phone.jpg)
-			repeat: no-repeat
-			position: center bottom
-			size: cover
+			image: url(../img/8.jpg)
+			repeat: repeat-y
+			position: center top
+			// size: contain
 		overflow: hidden
 
 		.col-1
@@ -12,18 +12,18 @@
 			// background: lightblue
 			&.cta
 				text-align: center
-				margin: 0
 
 			.home-cta
-				color: #19A1B9
+				color: #fff
+				background: #594C56
 
 			.home-lead
-				color: #fff
+				color: #000
 				line-height: 2
 				font:
 					size: 20px
 				margin-top: 220px
-				text-shadow: 2px 2px rgba(0,0,0, .5)
+				// text-shadow: 2px 2px rgba(0,0,0, .5)
 
 			.faces
 				// background: pink
@@ -32,8 +32,11 @@
 				padding-left: 10px
 				position: relative
 				transition: all .4s ease-in-out
-				top: 0px // transition works from start
+				top: 800px // transition works from start
 				left: 0px // transition works from start
+
+				&.launched
+					top: 0px
 
 				.face
 					width: 70px
@@ -45,8 +48,20 @@
 						position: center
 					box-shadow: 0px 4px 8px rgba(0,0,0,0.4)
 					position: relative
+					cursor: pointer
 					// &:hover .bubble
 					// 	opacity: 1
+					&.back-btn
+						background: transparent 
+						text-align: center
+						background:
+							image: url(../img/rewind.svg)
+							size: 40%
+							repeat: no-repeat
+							position: center
+						display: none
+						// @media (max-width: 640px)
+						// 	display: inline-block
 
 					.bubble
 						// display: none
@@ -73,14 +88,18 @@
 	@media (max-width: 640px)
 		section.mentoring
 			.col-1
+				margin-left: 0
 				.faces
 					margin: 0
-					width: 500px // 100px * 5 .face
+					width: 100px * 6 
 					height: auto
 					top: 230px
+					box-sizing: border-box
 					.face
 						display: inline-block
 						margin-right: 25px
+						&.back-btn
+							display: inline-block
 						.bubble
 							bottom: 90px
 							left: 10%
