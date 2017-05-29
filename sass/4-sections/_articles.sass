@@ -2,8 +2,6 @@
 	section.articles
 		background:
 			image: url(../img/light4.png)
-			size: cover
-			repeat: no-repeat
 			position: center bottom
 			padding-bottom: 0px
 		.col-1
@@ -26,14 +24,22 @@
 			display: block
 			background: 
 				size: cover
-			width: 33.333%
+			width: 25%
 			float: left
 			position: relative
 			overflow: hidden
+			opacity: 0
+			transition: all .3s ease-in-out
 			&:after
 				content: ""
 				display: block
 				padding-top: 100%
+			&.is-visible
+				opacity: 1
+			&.is-emph
+				animation-name: tada
+				animation-duration: 1s
+				animation-fill-mode: both
 
 			.article-meta
 				position: absolute
@@ -60,3 +66,24 @@
 			.col-1
 				padding: 50px
 
+
+@keyframes tada
+  from
+    transform: scale3d(1, 1, 1)
+ 
+
+  10%, 20%
+    transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg)
+ 
+
+  30%, 50%, 70%, 90%
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg)
+ 
+
+  40%, 60%, 80%
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg)
+ 
+
+  to
+    transform: scale3d(1, 1, 1)
+ 

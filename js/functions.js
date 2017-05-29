@@ -2,6 +2,7 @@
  $(window).scroll(function(){
  	scrolling_thumbnails_in_YouTube_section();
  	show_up_bubbles();
+ 	startArticles();
  });
 
 // ========= YOUTUBE SECTION ==========
@@ -16,6 +17,9 @@
  $(function(){
  	mentoring_bubble_click();
  	back_btn_click();
+ 	setInterval(function(){articleTada()}, 4000);
+ 	
+ 	// articleTada();
  });
 
 // ========= MENTORING SECTION ==========
@@ -23,7 +27,7 @@
 function show_up_bubbles() {
 	var scroll_position = $(window).scrollTop();
 
-	if($('section.mentoring').offset().top - 300 < scroll_position) {
+	if($('section.mentoring').offset().top - $(window).height()/2 < scroll_position) {
 		
 		if ( window.matchMedia("(min-width: 640px)").matches ) {
 		$('.faces').addClass('launched');
@@ -67,8 +71,6 @@ function show_up_bubbles() {
  	}); 
  } // back_btn_click()
 
-// ========= /MENTORING SECTION ==========
-
 function mentoring_section_wide_start(){
 		$('.faces').css( {
 		'top': '0px',
@@ -86,18 +88,6 @@ function mentoring_section_narrow_start(){
 	$('.face').first().addClass('has-bubble-open')
 	.siblings().removeClass('has-bubble-open');
 }
-
-// if (window.matchMedia("(max-width: 600px)").matches) {
-// 	$(window).resize(function() {
-// 	 if (window.matchMedia("(max-width: 640px)").matches) {
-// 		mentoring_section_narrow_start(); } 
-// }); 
-
-// if (window.matchMedia("(max-width: 640px)").matches) {
-// 	$(window).resize(function() {
-// 	 if (window.matchMedia("(min-width: 640px)").matches) {
-// 		mentoring_section_wide_start(); } 
-// }); 
 
 
 $(window).resize(function() {
@@ -120,3 +110,28 @@ $(window).resize(function() {
 			}
 });
 
+// ========= /MENTORING SECTION ==========
+
+
+// ========= ARTICLES SECTION ==========
+ 
+function articleTada(){
+
+	var randNum = Math.floor(Math.random() * $('.article-thumb').length) + 1;
+	$('.article-thumb').eq(randNum).addClass('is-emph')
+	.siblings().removeClass('is-emph');
+
+}
+
+function startArticles(){
+
+	var scroll_position = $(window).scrollTop();
+ 	if ($('section.articles').offset().top - $(window).height()/2 < scroll_position) {
+ 		
+ 		$('.article-thumb').each(function(i){
+
+ 		setTimeout(function(){$('.article-thumb').eq(i).addClass('is-visible');}, 60 * i);
+
+ 		});
+	}
+}
