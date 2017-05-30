@@ -1,0 +1,33 @@
+mixin design-img(img)
+	a(href="").design-img-link 
+		img(src= img)
+			
+
+section.design
+	.flex.flex--center
+		.col-50.flex.flex--center
+			.col-1
+				p.home-lead ....Something....
+				.design-wrap
+					+design-img("img/portfolio/portfolio01.jpg")
+					+design-img("img/portfolio/portfolio02.jpg")
+					+design-img("img/portfolio/portfolio03.jpg")
+					+design-img("img/portfolio/portfolio04.jpg")
+					+design-img("img/portfolio/portfolio05.jpg")
+					+design-img("img/portfolio/portfolio06.jpg")
+				.cf
+				a(href="").button.home-cta See more on Lorem
+
+		.col-50.flex.flex--center
+			.col-1
+				p.home-lead ....Something....
+				.design-wrap
+					+design-img("img/portfolio/portfolio07.jpg")
+					+design-img("img/portfolio/portfolio08.jpg")
+					+design-img("img/portfolio/portfolio09.jpg")
+					+design-img("img/portfolio/portfolio10.jpg")
+					+design-img("img/portfolio/portfolio11.jpg")
+					+design-img("img/portfolio/portfolio12.jpg")
+				.cf
+				a(href="").button.home-cta See more on Lorem2
+				
