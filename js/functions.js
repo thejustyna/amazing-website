@@ -1,12 +1,22 @@
 
  $(window).scroll(function(){
- 	scrolling_thumbnails_in_YouTube_section();
- 	show_up_bubbles();
+ 	scrollThumbnailsYoutubeSection();
+ 	showUpBubbles();
  	startArticles();
+ 	backgroundColorsDesignSection();
+ });
+
+
+ $(function(){
+ 	MentoringBubbleBick();
+ 	backBtnClick();
+ 	setInterval(function(){articleTada()}, 4000);
+ 	
+ 	// articleTada();
  });
 
 // ========= YOUTUBE SECTION ==========
- function scrolling_thumbnails_in_YouTube_section() {
+ function scrollThumbnailsYoutubeSection() {
  	var scroll_position = $(window).scrollTop();
  	if (window.matchMedia("(min-width: 640px)").matches) {
  		
@@ -14,17 +24,9 @@
  }
 // ========= /YOUTUBE SECTION ==========
 
- $(function(){
- 	mentoring_bubble_click();
- 	back_btn_click();
- 	setInterval(function(){articleTada()}, 4000);
- 	
- 	// articleTada();
- });
-
 // ========= MENTORING SECTION ==========
 
-function show_up_bubbles() {
+function showUpBubbles() {
 	var scroll_position = $(window).scrollTop();
 
 	if($('section.mentoring').offset().top - $(window).height()/2 < scroll_position) {
@@ -43,7 +45,7 @@ function show_up_bubbles() {
 }
 
 
- function mentoring_bubble_click(){
+ function MentoringBubbleBick(){
  	$('.face').on('click', function(){
 
  		var $this = $(this),
@@ -63,13 +65,13 @@ function show_up_bubbles() {
 	 	}
 	 		$this.siblings().removeClass('has-bubble-open');
 	 	}); // end of $('.face').on('click', function(){...}
- } // mentoring_bubble_click()
+ } // MentoringBubbleBick()
 
- function back_btn_click(){
+ function backBtnClick(){
  	$('.face.back-btn').on('click', function(){
  		mentoring_section_narrow_start();
  	}); 
- } // back_btn_click()
+ } // backBtnClick()
 
 function mentoring_section_wide_start(){
 		$('.faces').css( {
@@ -135,3 +137,32 @@ function startArticles(){
  		});
 	}
 }
+
+// ========= /ARTICLES SECTION ==========
+
+// ========= DESIGN SECTION ==========
+
+function backgroundColorsDesignSection(){
+	//.design-img-link hover
+	$('.design-img-link').hover(function(){
+	//find a color for every img, and apply it to the bg
+		$(this).parents().eq(2).css( {
+			'background-image': $(this).data('bg'),
+			'background-size': 'cover',
+			'background-position': 'center',
+			});
+	}, function(){
+	// back to the previous bg
+		$(this).parents().eq(2).css({
+
+			'background-image':  $(this).parents().eq(2).data('orig-bg'),
+			'background-size' : 'auto',
+
+			});
+
+	} );
+
+}
+
+
+

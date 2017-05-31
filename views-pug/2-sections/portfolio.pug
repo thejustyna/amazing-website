@@ -1,33 +1,33 @@
-mixin design-img(img)
-	a(href="").design-img-link 
+mixin design-img(img, bg)
+	a(href="" data-bg= bg).design-img-link 
 		img(src= img)
 			
 
 section.design
 	.flex.flex--center
-		.col-50.flex.flex--center.portf-1
+		.col-50.flex.flex--center.portf-1(data-orig-bg="url('../img/light8.png')")
 			.col-1
-				p.home-lead.dark ....Something....
+				p.home-lead.dark Your text...
 				.design-wrap
-					+design-img("img/portfolio/portfolio01.jpg")
-					+design-img("img/portfolio/portfolio02.jpg")
-					+design-img("img/portfolio/portfolio03.jpg")
-					+design-img("img/portfolio/portfolio04.jpg")
-					+design-img("img/portfolio/portfolio05.jpg")
-					+design-img("img/portfolio/portfolio06.jpg")
+					+design-img("img/portfolio/portfolio01.jpg", "url('../img/portfolio/portfolio01.jpg')")
+					+design-img("img/portfolio/portfolio02.jpg", "url('../img/portfolio/portfolio02.jpg')")
+					+design-img("img/portfolio/portfolio03.jpg", "url('../img/portfolio/portfolio03.jpg')")
+					+design-img("img/portfolio/portfolio04.jpg", "url('../img/portfolio/portfolio04.jpg')")
+					+design-img("img/portfolio/portfolio05.jpg", "url('../img/portfolio/portfolio05.jpg')")
+					+design-img("img/portfolio/portfolio06.jpg", "url('../img/portfolio/portfolio06.jpg')")
 				.cf
 				a(href="").button.home-cta.dark See more on Lorem
 
-		.col-50.flex.flex--center.portf-2
+		.col-50.flex.flex--center.portf-2(data-orig-bg="url('../img/dark5.png')")
 			.col-1
-				p.home-lead.light ....Something....
+				p.home-lead.light ...something lorem ipsum 
 				.design-wrap
-					+design-img("img/portfolio/portfolio07.jpg")
-					+design-img("img/portfolio/portfolio08.jpg")
-					+design-img("img/portfolio/portfolio09.jpg")
-					+design-img("img/portfolio/portfolio10.jpg")
-					+design-img("img/portfolio/portfolio11.jpg")
-					+design-img("img/portfolio/portfolio12.jpg")
+					+design-img("img/portfolio/portfolio07.jpg", "url('../img/portfolio/portfolio07.jpg')")
+					+design-img("img/portfolio/portfolio08.jpg", "url('../img/portfolio/portfolio08.jpg')")
+					+design-img("img/portfolio/portfolio09.jpg", "url('../img/portfolio/portfolio09.jpg')")
+					+design-img("img/portfolio/portfolio10.jpg", "url('../img/portfolio/portfolio10.jpg')")
+					+design-img("img/portfolio/portfolio11.jpg", "url('../img/portfolio/portfolio11.jpg')")
+					+design-img("img/portfolio/portfolio12.jpg", "url('../img/portfolio/portfolio12.jpg')")
 				.cf
 				a(href="").button.home-cta.light See more on Lorem2
 				
