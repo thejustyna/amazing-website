@@ -1,13 +1,14 @@
 .home-section
 	section.design
 		padding-top: 0
+		padding-bottom: 0
 		.portf-1
 			background: 
-				image: url('../img/light8.png')
+				image: url('../img/light2.png')
 			transition: all .3 ease-in-out
 		.portf-2
 			background:
-				image: url('../img/dark5.png')
+				image: url('../img/dark3.png')
 			transition: background .3 ease-in-out
 		.col-1
 			display: flex
@@ -19,6 +20,8 @@
 				width: calc(50% - 10px)
 				float: left
 				margin: 5px
+				@media (max-width: 640px)
+					width: calc(33.333% - 10px)
 				img 
 					// transition: transform 1 ease-in-out
 					width: 100%
@@ -31,11 +34,7 @@
 				margin-bottom: 20px
 
 			.home-lead
-				font-size: 22px 
-				line-height: 2
 				text-align: center
-				&.dark
-					color: black
 				&.light
 					color: #EBEBEB
 

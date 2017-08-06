@@ -1,0 +1,63 @@
+.home-section
+	section.form
+		color: white
+		margin-top: 0
+		background: 
+			image: url('../img/dark1.png')
+		.home-lead
+			color: white
+		ul 
+			padding: 10px
+		li 	
+			line-height: 2.3
+		a
+			color: white
+			text-decoration: underline
+		p 	
+			line-height: 2
+
+		.col-1
+			padding-left: 30px
+			margin: 20px 0
+			width: 100%
+			font-style: italic
+			@media (max-width: 640px)
+				padding-left: 0
+				text-align: center
+
+			&:first-child
+				border-right: 1px solid white
+				padding-left: 0
+				padding-right: 30px
+				text-align: right
+				@media (max-width: 640px)
+					text-align: center
+					padding-right: 0
+
+		.form-wrap	
+			background: rgba(lightblue, .3)
+			border: 1px solid white
+			display: flex
+			@media (max-width: 640px)
+				display: block
+				width: 100%
+				margin: 0 auto
+
+		.field-group
+			position: relative
+			&:first-child
+				border-right: 1px white solid
+			label
+				position: absolute
+				border: none
+				left: 5px
+			input 
+				background: transparent
+				border: none
+				padding: 20px 5px 5px
+				// width: 100%
+
+		.form-btn
+			padding: .7em
+					// color: transparent
+
